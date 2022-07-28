@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Battle</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Only start game button -->
+    <div id="homepage">
+        <img src="./assets/images/pokemonLogo.png" alt="">
+        <h1 onclick="menuGame()" id="startgame">START GAME</h1>
+    </div>
+
+    <!-- For select your pokemon and confirm this choice -->
+    <div id="select_pokemon_screen">
+        <div id="fire" class="pokemon-bg">
+            <img id="pokemonFire" onclick="chosenPokemon('pokemonFire')" src="./assets/images/pokebola.png" alt="">
+        </div>
+        <div id="water" class="pokemon-bg">
+            <img id="pokemonWater" onclick="chosenPokemon('pokemonWater')" src="./assets/images/pokebola.png" alt="">
+        </div>
+        <div id="grass" class="pokemon-bg">
+            <img id="pokemonGrass" onclick="chosenPokemon('pokemonGrass')" src="./assets/images/pokebola.png" alt="">
+        </div>
+        <div id="eletric" class="pokemon-bg">
+            <img id="pokemonEletric" onclick="chosenPokemon('pokemonEletric')" src="./assets/images/pokebola.png"
+                alt="">
+        </div>
+    </div>
+
+    <!-- Teacher Carvalho picture and talks -->
+    <div id="profCarv">
+        <img id="prof" src="./assets/images/professor Carvalho.png" alt="">
+        <div id="profTalk"></div>
+
+        <!-- button for confirm pokemon choice -->
+        <div id="pokemon_confirmation_screen">
+            <div class="button" onclick="infoBoss()">Sim</div>
+            <div class="button" onclick="closePokeballs(), infoPokemon('')">Não</div>
+        </div>
+
+        <!-- button for start combat with mewtwo -->
+        <div id="start_combat">
+            <div class="button" onclick="startFight()">Iniciar Combat</div><!-- , createScore(chosenPokemon) -->
+            <div class="button" onclick="menuGame()">Voltar ao menu</div>
+        </div>
+    </div>
+
+    <!-- mewtwo apparition -->
+    <div id="infoMewtwo">
+        <div id="pyschic">
+            <img id="pokemonPsychic" src="./assets/images/mewtwo.png" alt="">
+        </div>
+    </div>
+
+    <!-- combat screen -->
+    <div id="battlefield">
+        <div id="boss" class="fight">
+
+            <div id="scoreBoss" class="score">
+                <div id="lifeBoss"> </div>
+                <div id="damageBoss"> </div>
+            </div>
+            <div class="pokemon">
+                <img id="mewTwo" src="./assets/images/mewtwo.png" alt="">
+            </div>
+
+        </div>
+
+        <div id="player" class="fight">
+
+            <div class="pokemon">
+                <img id="playerPokemon" src="" alt="">
+            </div>
+            <div class="score">
+                <div id="lifePlayer"> </div>
+                <div id="damagePlayer"> </div>
+                <div id="healPlayer"></div>
+            </div>
+            <div id="combat_interface">
+                <div id="teacherTalk"></div>
+                <!-- button for combat with mewtwo -->
+                <div id="combatButtons">
+                    <div id="atackBtn" class="button" onclick="playerMove('atack')">ATACK</div>
+                    <div id="healBtn" class="button" onclick="playerMove('heal')">HEAL</div>
+                </div>
+                <div id="restartGame">
+                    <div id="yes_Restart" class="button" onclick="menuGame()">Yes</div>
+                    <div id="no_Restart" class="button">No</div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./data/data.js"></script>
+    <script src="./interface/interface.js"></script>
+    <script src="./game/game.js"></script>
+</body>
+
+</html>

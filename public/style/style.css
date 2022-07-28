@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Pokemon Font';
+    src: url('../assets/fonts/pokemonFont/Pokemon\ Solid.ttf') format('truetype');
+}
+
+#homepage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+    font-family: 'Pokemon Font';
+}
+
+#startgame {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+#startgame:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#select_pokemon_screen,
+#infoMewtwo {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: top;
+    background-color: rgb(255, 255, 255);
+    display: none;
+}
+
+.pokemonImage {
+    height: 20vh;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#pokemonFire {
+    height: 20vh;
+    width: 10vw;
+}
+
+.pokemon-bg {
+    height: 50vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#pokemonFire,
+#pokemonWater,
+#pokemonGrass,
+#pokemonEletric,
+#pokemonPsychic {
+    height: 40vh;
+    width: 20vw;
+}
+
+#fire,
+#water,
+#grass,
+#eletric,
+#pyschic {
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+    border-radius: 100%;
+}
+
+#fire:hover,
+#water:hover,
+#grass:hover,
+#eletric:hover {
+    border: 5px solid black;
+    border-radius: 100%;
+}
+
+
+#profCarv {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    /* flex-direction: column; */
+
+}
+
+#prof {
+    height: 30vh;
+    position: absolute;
+    left: 15%;
+    bottom: 0px;
+
+}
+
+
+#profTalk {
+    border-radius: 3px;
+    margin-left: 300px;
+    margin-bottom: 2%;
+    border: 2px solid black;
+    width: 50%;
+    font-family: 'Koulen', cursive;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#pokemon_confirmation_screen,
+#start_combat,
+#combatButtons,
+#combat_interface {
+    border-radius: 3px;
+    margin-bottom: 2%;
+    width: 15%;
+    font-family: 'Koulen', cursive;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+
+.button {
+    border-radius: 3px;
+    height: 30%;
+    width: 50%;
+    border: 2px solid black;
+    margin: 2px;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* battlefield interface */
+
+#battlefield {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.score {
+    width: 200px;
+    height: 450px;
+    font-family: 'Koulen', cursive;
+    font-size: 30px;
+
+}
+
+
+
+#scoreBoss {
+    text-align: end;
+}
+
+#boss {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+
+    height: 50%;
+}
+
+#player {
+    display: flex;
+    justify-content: start;
+    align-self: flex-end;
+    height: 50%;
+
+}
+
+#playerPokemon {
+    transform: rotateX(180deg);
+    transform: rotateY(180deg);
+
+}
+
+.btnCombat {
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Koulen', cursive;
+    background-color: none;
+    color: white;
+
+}
+
+.btnCombat:hover {
+    font-size: 20px;
+    color: white;
+}
+
+#healBtn,
+#no_Restart {
+    background-color: darkgreen;
+}
+
+#atackBtn,
+#yes_Restart {
+    background-color: darkred;
+
+}
+
+#teacherTalk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    border: 2px solid black;
+    width: 40vw;
+    height: 70%;
+    font-family: 'Koulen', cursive;
+    font-size: 30px;
+    padding: 10px;
+
+}
+
+#combatButtons,
+#restartGame {
+    width: 10vw;
+    height: 20vh;
+}
+
+#combat_interface {
+    display: flex;
+    margin-left: 5%;
+    justify-content: start;
+    align-self: flex-end;
+    width: 50vw;
+    height: 40%;
+
+}
